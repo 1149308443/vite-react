@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>web component尝试</title>
+
+    <!-- HTML Imports 废弃-->
+    <!-- <link rel="import" href="component-div.html" /> -->
+    <!-- ES Modules -->
+    <script type="module" src="esmodule.js"></script>
+    <!-- <script type="module" src="extendComponent.js"></script> -->
+    <script type="module" src="template.js"></script>
+  </head>
+  <body>
+    <!-- <test-div-import></test-div-import> -->
+
+    <!-- 自定义标签组件 -->
+    <components-div></components-div>
+    <!-- 扩展原有标签组件 -->
+    <!-- <p is="my-custom">点击</p> -->
+
+    <!-- shadow dom  -->
+    <!-- <div>web componet</div> -->
+    <!-- <iframe src="http://www.baidu.com"></iframe> -->
+
+    <!-- <my-template></my-template> -->
+    <!-- <span slot="my-slot">my-slot</span> -->
+<!-- 
+    <div>
+      <p>组件生命周期测试</p>
+      <p>
+        <button class="add">添加组件</button>
+        <button class="remove">移除组件</button>
+        <button class="update">更改组件属性</button>
+      </p>
+    </div> -->
+  </body>
+
+  <!-- <script>
+    const add = document.querySelector('.add')
+    const update = document.querySelector('.update')
+    const remove = document.querySelector('.remove')
+    let element = null
+
+    add.onclick = function(){
+      element = document.createElement('components-div');
+      element.setAttribute('class', 'red');
+      document.body.appendChild(element);
+    }
+    remove.onclick = function () {
+      if(element) document.body.removeChild(element);
+      element = null
+    };
+    update.onclick = function () {
+      if(element){
+        element.setAttribute('id', 'blue');
+      } else {
+        alert('请先添加组件')
+      }
+    };
+  </script> -->
+</html>

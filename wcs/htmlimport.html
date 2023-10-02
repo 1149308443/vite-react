@@ -1,0 +1,22 @@
+<style>
+  div {
+    color: red;
+  }
+</style>
+
+<template>
+  <div>你好,我是一个 Web Components 组件.</div>
+</template>
+
+<script>
+  const dom =
+    document.currentScript.ownerDocument.querySelector('template').content
+  class Div extends HTMLElement {
+    constructor() {
+      super()
+      this.attachShadow({ mode: 'open' }).appendChild(dom)
+    }
+  }
+  // 注册组件
+  customElements.define('test-div-import', Div)
+</script>
